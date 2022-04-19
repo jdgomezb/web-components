@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components - modal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+  </style>
+  <script defer src="modal.js"></script>
+</head>
+<body>
+  <p>Please confirm your choice:</p>
+  <button>Show details!</button>
+
+  <jd-modal modal-title="This can be the header title!">
+    <h1 slot="title">Please confirm!</h1>
+    <p>Are you sure you want to continue?</p>
+  </jd-modal>
+  
+
+  <script>
+    const confirmButton = document.querySelector('button');
+    const modal = document.querySelector('jd-modal');
+
+    modal.addEventListener('confirm', () => {
+      console.log('Confirmed...');
+    });
+    modal.addEventListener('cancel', () => {
+      console.log('Cancelled...');
+    });
+    
+    confirmButton.addEventListener('click', () => {
+      //modal.setAttribute('opened', '');
+      if (!modal.isOpen) {
+        modal.open();
+      }
+    });
+  </script>
+</body>
+</html>
