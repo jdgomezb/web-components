@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components - example page</title>
+  <script defer src="tooltip.js"></script>
+  <script defer src="confirm-link.js"></script>
+  <style>
+    div {
+      border: 2px solid orange;
+    }
+  </style>
+</head>
+<body>
+  <!-- <template id="tooltip-template">
+    <slot>Default slot content!</slot>  <span> (?)</span>
+  </template> -->
+  <p><jd-tooltip text="This is the tooltip text!">When used</jd-tooltip> this can be fun!</p>
+  <p>This can <jd-tooltip text="This is another tooltip!">always</jd-tooltip> be fun!</p>
+  <div>This does not get the web component styles!</div>
+  <a href="https://google.com">Go to google.com</a> Default
+  <br>
+  <a is="jd-confirm-link" href="https://google.com">Go to google.com</a> Web Component
+</body>
+</html>
