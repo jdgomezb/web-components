@@ -8,8 +8,18 @@
   <script defer src="tooltip.js"></script>
   <script defer src="confirm-link.js"></script>
   <style>
+    :root {
+      --color-accent: #ea6b6b;
+    }
     div {
       border: 2px solid orange;
+    }
+    /*.highlight {
+      background-color: #f5c367;
+    } */
+    jd-tooltip {
+      border-bottom: 1px dashed #666;
+      padding: 0.25em;
     }
   </style>
 </head>
@@ -17,10 +27,22 @@
   <!-- <template id="tooltip-template">
     <slot>Default slot content!</slot>  <span> (?)</span>
   </template> -->
-  <p><jd-tooltip text="This is the tooltip text!">When used</jd-tooltip> this can be fun!</p>
-  <p>This can <jd-tooltip text="This is another tooltip!">always</jd-tooltip> be fun!</p>
+  <p>
+    <jd-tooltip text="This is the tooltip text!">
+      <span class="highlight">When used</span>
+    </jd-tooltip> this can be fun!
+  </p>
+
+  <br>
+  This can <jd-tooltip class="important" text="This is another tooltip!">always</jd-tooltip> be fun!
+  
+  <br>
+  <br>
   <div>This does not get the web component styles!</div>
+  <br>
+  
   <a href="https://google.com">Go to google.com</a> Default
+  <br>
   <br>
   <a is="jd-confirm-link" href="https://google.com">Go to google.com</a> Web Component
 </body>
