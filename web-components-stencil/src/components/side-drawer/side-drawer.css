@@ -1,6 +1,8 @@
+@import '../../global/global.css';
+
 aside {
-  background-color: #f3f3f3;
-  border-right: 1px solid #444;
+  background-color: var(--lightest-grey);
+  border-right: 1px solid var(--dark-grey);
   box-shadow: 0 2px 8px rgb(0, 0, 0, 0.26);
   position: fixed;
   top: 0;
@@ -18,22 +20,22 @@ aside {
 }
 
 header {
-  background-color: #999;
+  background-color: var(--grey);
   padding: 1rem;
   position: relative;
 }
 
 header h1 {
-  color: white;
+  color: var(--white);
   font-size: 1.5rem;
 }
 
 header button {
-  background-color: #999;
+  background-color: var(--grey);
   border: none;
   border-radius: 4px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-  color: white;
+  color: var(--white);
   cursor: pointer;
 
   width: 30px;
@@ -52,11 +54,11 @@ header button {
 }
 
 .tabs button {
-  background-color: #fefefe;
+  background-color: var(----lightning-grey);
   border: none;
   border-radius: 4px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-  color: #444;
+  color: var(--dark-grey);
   cursor: pointer;
   font: inherit;
   padding: .5rem;
@@ -65,8 +67,8 @@ header button {
 }
 
 .tabs .active {
-  background-color: #999;
-  color: white;
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 #contact-information {
@@ -88,4 +90,26 @@ header button {
 
 :host([open]) #backdrop {
   display: block;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.side-nav li {
+  padding: 0;
+  border-bottom: 1px solid var(--light-grey);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.side-nav a {
+  color: var(--green);
+  display: block;
+  padding: 1rem 2rem;
+}
+#btn {
+  cursor: pointer;
+  position: fixed;
+  right: 5rem;
+  top: 2rem;
 }

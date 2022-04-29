@@ -1,0 +1,52 @@
+@import '../../global/global.css';
+
+:host {
+  font-family: sans-serif;
+  border: 2px solid var(--purple);
+  margin: 2rem;
+  padding: 1rem;
+  display: block;
+  width: 20rem;
+  max-width: 100%;
+}
+
+:host(.error) {
+  border-color: var(--error);
+}
+
+form input {
+  font: inherit;
+  color: var(--purple);
+  padding: 0.1rem 0.25rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* form input:focus,
+form button:focus {
+  outline: none;
+} */
+
+form button {
+  font: inherit;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--purple);
+  background: var(--purple);
+  color: var(--white);
+  cursor: pointer;
+}
+
+form button:hover,
+form button:active {
+  background: var(--light-purple);
+  border-color: var(--light-purple);
+}
+
+form button:disabled,
+form button:disabled:hover,
+form button:disabled:active {
+  background: var(--light-grey);
+  border: 1px solid #9f9f9f;
+  color: #666;
+  cursor: default;
+}

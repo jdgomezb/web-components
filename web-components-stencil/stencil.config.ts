@@ -1,7 +1,8 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'web-components-stencil',
+  namespace: 'JDWebComponents',
+  buildEs5: 'prod',
   outputTargets: [
     {
       type: 'dist',

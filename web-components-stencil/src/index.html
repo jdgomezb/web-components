@@ -4,38 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
+
     <style>
       body {
         font-family: sans-serif;
         margin: 0;
       }
-      .side-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .side-nav li {
-        padding: 0;
-        border-bottom: 1px solid #ccc;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      }
-      .side-nav a {
-        color: #829e28;
-        display: block;
-        padding: 1rem 2rem;
-      }
-      #btn {
-        cursor: pointer;
-        position: fixed;
-        right: 5rem;
-        top: 2rem;
-      }
     </style>
-    <script type="module" src="/build/web-components-stencil.esm.js"></script>
-    <script nomodule src="/build/web-components-stencil.js"></script>
+    <script type="module" src="/build/jdwebcomponents.esm.js"></script>
+    <script nomodule src="/build/jdwebcomponents.js"></script>
   </head>
   <body>
+    <jd-stock-price stock-symbol="MSFT"></jd-stock-price>
 
+    <jd-stock-finder></jd-stock-finder>
+
+    <!--
     <button id="btn">Open side drawer</button>
 
     <jd-side-drawer header-title="This is the Title provided">
@@ -49,8 +33,10 @@
         </ul>
       </nav>
     </jd-side-drawer>
+-->
 
     <script>
+      /*
       const button = document.querySelector('#btn');
       const sideDrawer = document.querySelector('jd-side-drawer');
 
@@ -66,6 +52,12 @@
       // setTimeout(() => {
       //   sideDrawer.headerTitle = 'This is the Title changed';
       // }, 2000);
+
+      const stockFinderEl = document.querySelector('jd-stock-finder');
+      stockFinderEl.addEventListener('jdSymbolSelected', event => {
+        console.log('jdSymbolSelected', event);
+      });
+      */
     </script>
   </body>
 </html>
