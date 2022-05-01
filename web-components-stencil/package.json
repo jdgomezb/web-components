@@ -1,5 +1,5 @@
 {
-  "name": "web-components-stencil",
+  "name": "jd-components",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -9,10 +9,10 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/web-components-stencil/web-components-stencil.esm.js",
+  "unpkg": "dist/jd-components/jd-components.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/jdgomezb/web-components.git"
   },
   "files": [
     "dist/",
