@@ -1,3 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <jd-stock-price></jd-stock-price>
-<jd-stock-finder></jd-stock-finder>
+<jd-stock-finder
+  *ngIf="showStockFinder"
+></jd-stock-finder>
+
+<button
+  *ngIf="!showStockFinder"
+  (click)="showStockFinder = true"
+>
+  Load finder component
+</button>
