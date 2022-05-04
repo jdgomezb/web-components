@@ -7,7 +7,7 @@ class App extends Component {
   };
 
   render() {
-    let showStockFinder = null;
+    let showStockFinder = <button onClick={() => this.setState({showStockFinder: true})}>Load finder component</button>;
     if (this.state.showStockFinder) {
       showStockFinder = <jd-stock-finder></jd-stock-finder>;
     }
@@ -16,8 +16,6 @@ class App extends Component {
         <jd-stock-price></jd-stock-price>
 
         {showStockFinder}
-
-        <button onClick={() => this.setState({showStockFinder: true})}>Show finder component</button>
       </div>
     );
   }
