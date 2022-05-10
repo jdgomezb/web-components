@@ -26,4 +26,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd web-components && npm run build-storybook
+    - run: cd web-components-stencil && npm run build-storybook
