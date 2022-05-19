@@ -25,7 +25,8 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006 -s dist",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=41b7b33e6d60"
   },
   "dependencies": {
     "@stencil/core": "^2.13.0"
@@ -39,6 +40,7 @@
     "@storybook/html": "^6.4.22",
     "@types/jest": "^27.0.3",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.5.4",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0"
